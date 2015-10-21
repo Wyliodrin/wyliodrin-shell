@@ -15,9 +15,17 @@ var keys = false;
 
 var GADGET_NAME = '';
 
+function getParameter(id) 
+{
+  id = id.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+  var regex = new RegExp("[\\?&]" + id + "=([^&#]*)"),
+      results = regex.exec(location.search);
+  return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
 function socketOnline ()
 {
-  wylioio.message ('login', 'befe9f8a14346e3e52c762f333395796');
+  wylioio.message ('login', {password: getParameter ('password'), width:cols , height:rows});
   if (!keys)
   {
     wylioio.on ('keys', function (data)
@@ -76,33 +84,7 @@ function setSizes()
    cols = Math.floor(($(window).width ()-10)/10);
   rows = Math.floor(($(window).height()-90)/16);
    xterm.resize (cols, rows);
-   if (shellid)
-   {
     wylioio.message ('size', {width:cols, height:rows});
-   }
-}
-
-function setStatusGadget (status, text, log)
-{
-  var exonline = online;
-  if (status == 'success')
-  {
-    online = true;
-  }
-  else
-  {
-    online = false;
-  }
-  console.log ('statusgadget');
-  var s = $("#statusgadget")[0];
-  if (s)
-  {
-    s.innerHTML = text;
-    s.className = 'label label-'+status+' label-status2';
-    if (log) console.log ('status: '+log);
-  }
-  if (status == 'success' && !exonline) return true;
-  else return false;
 }
 
 $(document).ready(function () {   

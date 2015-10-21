@@ -26,6 +26,8 @@ console.log ('Password '+md5 (config.password));
 
 var term = null;
 
+console.log (term);
+
 app.use ('/public', express.static ('./public'));
 
 app.get ('/shell/:password', function (req, res)
@@ -54,14 +56,14 @@ io.on('connection', function (socket) {
 	socket.on ('login', function (data)
 	{
 		console.log (md5(config.password));
-		if (!login && data && data === md5(config.password))
+		if (!login && data && data.password === md5(config.password))
 		{
 			login = true;
 
 			term = pty.spawn('bash', [], {
 			  name: 'xterm-color',
 			  cols: data.width || 80,
-			  rows: data.heigth || 25,
+			  rows: data.height || 25,
 			  cwd: '/wyliodrin',
 			  env: _.assign (process.env, {
 			  	wyliodrin_board: board,

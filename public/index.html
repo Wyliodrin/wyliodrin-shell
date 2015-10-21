@@ -12,6 +12,9 @@
 		<script src="libs/xterm.js"></script>
 		<script src="libs/shell.js"></script>
 		<script src="libs/wylioio.js"></script>
+
+		<link type="text/css" rel="stylesheet" href="style/wyliodrin.css" />
+		<link type="text/css" rel="stylesheet" href="style/shell.css" />
 		
 
 		<!-- injector:js -->
@@ -26,14 +29,14 @@
 
 	    $(document).ready (function ()
 	    {
-	    	
+	    		$(".gadgetName").text (getParameter ('gadget'));
 
 	    });
 	    </script>
 	</head>
 	<body>
 	    <div class="topContainer">
-	<p><a href="#" class="gadgetName"><%=gadget.name%></a> <span class="connectionStatus"><span class="label label-status" id="statusgadget">Offline</span></a></span></p>
+	<p><a href="#" class="gadgetName"></a> <span class="connectionStatus"><span class="label label-status" id="statusgadget">Offline</span></a></span></p>
     </div>
 
     <div id="shell" style="margin:0px; position:absolute;">

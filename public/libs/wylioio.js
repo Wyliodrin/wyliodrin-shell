@@ -11,6 +11,7 @@ var exit = false;
 
 function setStatus (status, text, log)
 {
+  console.log ('status '+status);
   var exonline = online;
   if (status == 'success')
   {
@@ -20,7 +21,7 @@ function setStatus (status, text, log)
   {
     online = false;
   }
-  var s = $("#status")[0];
+  var s = $("#statusgadget")[0];
   if (s)
   {
     s.innerHTML = text;
@@ -109,7 +110,7 @@ function startSocket ()
 
   wylioio.on ('connect', function ()
   {
-    setStatus ('info', 'Connected', 'connect');
+    setStatus ('success', 'Online', 'connect');
     socketOnline ();
   });
 
