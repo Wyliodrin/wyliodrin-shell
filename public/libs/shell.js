@@ -13,6 +13,8 @@ var rows = null;
 
 var keys = false;
 
+var GADGET_NAME = '';
+
 function socketOnline ()
 {
   wylioio.message ('login', 'befe9f8a14346e3e52c762f333395796');
