@@ -10,17 +10,17 @@ var md5 = require ('md5');
 var pty = require ('pty.js');
 var _ = require ('lodash');
 
-/*var board = readFileSync ('/etc/wyliodrin/boardtype');
+var board = readFileSync ('/etc/wyliodrin/boardtype');
 console.log ('Board is '+board);
 var setup = JSON.parse (readFileSync ('/etc/wyliodrin/settings_'+board+'.json'));
 console.log (setup);
 var config = JSON.parse(readFileSync (setup.config_file));
-console.log (config);*/
+console.log (config);
 
-var board = 'raspberrypi';
+/*var board = 'raspberrypi';
 var config = {
 	password: 'qawsed'
-};
+};*/
 
 console.log ('Password '+md5 (config.password));
 
