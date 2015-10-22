@@ -5,16 +5,16 @@ var express = require('express');
 var app = express ();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
-//var fs = require ('fs');
+var fs = require ('fs');
 var md5 = require ('md5');
 var pty = require ('pty.js');
 var _ = require ('lodash');
 
 var board = readFileSync ('/etc/wyliodrin/boardtype');
 console.log ('Board is '+board);
-var setup = JSON.parse (readFileSync ('/etc/wyliodrin/settings_'+board+'.json'));
+var setup = JSON.parse (fs.readFileSync ('/etc/wyliodrin/settings_'+board+'.json'));
 console.log (setup);
-var config = JSON.parse(readFileSync (setup.config_file));
+var config = JSON.parse(fs.readFileSync (setup.config_file));
 console.log (config);
 
 /*var board = 'raspberrypi';
