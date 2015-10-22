@@ -4,7 +4,7 @@ var xterm = null;
 
 var connected = false;
 
-var shellid = null;
+var shellid = false;
 var requestid = null;
 
 var gadgetid = null;
@@ -25,6 +25,7 @@ function getParameter(id)
 
 function socketOnline ()
 {
+  shellid = true;
   wylioio.message ('login', {password: getParameter ('password'), width:cols , height:rows});
   if (!keys)
   {
@@ -51,6 +52,7 @@ function socketOffline ()
 {
   // shellid = null;
   // requestid = null;
+  shellid = false;
 }
 
 function xtermKeys (str)
