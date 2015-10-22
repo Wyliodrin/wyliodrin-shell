@@ -10,7 +10,7 @@ var md5 = require ('md5');
 var pty = require ('pty.js');
 var _ = require ('lodash');
 
-var board = readFileSync ('/etc/wyliodrin/boardtype');
+var board = fs.readFileSync ('/etc/wyliodrin/boardtype');
 console.log ('Board is '+board);
 var setup = JSON.parse (fs.readFileSync ('/etc/wyliodrin/settings_'+board+'.json'));
 console.log (setup);
