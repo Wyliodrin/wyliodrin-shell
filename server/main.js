@@ -22,11 +22,11 @@ try
 }
 catch (e)
 {
-	
+
 }
 console.log (config);
 
-if (config === null) 
+if (config === null)
 {
 	console.log ('error: wyliodrin.json');
 	process.exit (255);
@@ -129,5 +129,4 @@ io.on('connection', function (socket) {
 			socket.disconnect ();
 		}
 	});
-  });
-}
+});
