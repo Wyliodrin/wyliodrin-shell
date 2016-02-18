@@ -14,8 +14,20 @@ var board = fs.readFileSync ('/etc/wyliodrin/boardtype');
 console.log ('Board is '+board);
 var setup = JSON.parse (fs.readFileSync ('/etc/wyliodrin/settings_'+board+'.json'));
 console.log (setup);
-var config = JSON.parse(fs.readFileSync (setup.config_file));
+var config = null;
+
+try
+{
+	config = JSON.parse(fs.readFileSync (setup.config_file));
+}
+catch (e)
+{
+	
+}
 console.log (config);
+
+if (config !== null)
+{
 
 /*var board = 'raspberrypi';
 var config = {
@@ -115,4 +127,11 @@ io.on('connection', function (socket) {
 		}
 	});
   });
-
+}
+else
+{
+	setTimeout (function ()
+	{
+		process.exit (0);	
+	}, 45000);
+}
