@@ -26,8 +26,11 @@ catch (e)
 }
 console.log (config);
 
-if (config !== null)
+if (config === null) 
 {
+	console.log ('error: wyliodrin.json');
+	process.exit (255);
+}
 
 /*var board = 'raspberrypi';
 var config = {
@@ -127,11 +130,4 @@ io.on('connection', function (socket) {
 		}
 	});
   });
-}
-else
-{
-	setTimeout (function ()
-	{
-		process.exit (0);	
-	}, 45000);
 }
