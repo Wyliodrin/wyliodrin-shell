@@ -8,6 +8,8 @@ build:
 install:
 	mkdir -p $(DESTDIR)/usr/wyliodrin/wyliodrin-shell
 	cp -rf node_modules tmp/* $(DESTDIR)/usr/wyliodrin/wyliodrin-shell
+	mkdir -p $(DESTDIR)/etc/supervisor/conf.d
+	cp -rf wyliodrin-shell.conf $(DESTDIR)/etc/supervisor/conf.d
 
 .PHONY: clean
 clean:
