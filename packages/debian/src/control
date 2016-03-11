@@ -11,5 +11,4 @@ Vcs-Browser: https://github.com/Wyliodrin/wyliodrin-shell
 Package: wyliodrin-shell
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, nodejs, supervisor
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: wyliodrin-shell
