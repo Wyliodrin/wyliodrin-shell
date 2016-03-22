@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Fri, 11 Mar 2016 08:40:33 +0000
+Source: wyliodrin-shell
+Binary: wyliodrin-shell
+Architecture: source armhf
+Version: 1.0.1
+Distribution: trusty
+Urgency: low
+Maintainer: Razvan MATEI <matei.rm94@gmail.com>
+Changed-By: Razvan MATEI <matei.rm94@gmail.com>
+Description:
+ wyliodrin-shell - wyliodrin-shell
+Changes:
+ wyliodrin-shell (1.0.1) trusty; urgency=low
+ .
+   * Initial release
+Checksums-Sha1:
+ 2cfda0a747ba88ac55194002c39db64dfe61012d 749 wyliodrin-shell_1.0.1.dsc
+ 3ad5af81d822f0d9b6cd7c624bd993e13ed1e981 3348700 wyliodrin-shell_1.0.1.tar.xz
+ 2e4e8e180faf0d64291fb84910ce1e6ff7ffcaca 2870670 wyliodrin-shell_1.0.1_armhf.deb
+Checksums-Sha256:
+ c7c3b41d8fc36b2cdef3d1d8dc9e619bcb5b9e62eb8ce13c654efd1fb433b107 749 wyliodrin-shell_1.0.1.dsc
+ c391a479c9300ed8578bfd4dc7ce5756282eba16d217ecc3ab5183f5afd9eba8 3348700 wyliodrin-shell_1.0.1.tar.xz
+ aa4564db1a271e3a71bfc4f4e60827c06ca43a26f304d0ce1dbe61ac3b11a089 2870670 wyliodrin-shell_1.0.1_armhf.deb
+Files:
+ 339258deebf54274b6d7eb380876773b 749 unknown optional wyliodrin-shell_1.0.1.dsc
+ b36a6c379563790a02f47257070d60fe 3348700 unknown optional wyliodrin-shell_1.0.1.tar.xz
+ 2d4aabf99b1c024020bc0b366415cac0 2870670 unknown optional wyliodrin-shell_1.0.1_armhf.deb

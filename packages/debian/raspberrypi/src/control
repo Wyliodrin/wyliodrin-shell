@@ -1,0 +1,14 @@
+Source: wyliodrin-shell
+Section: unknown
+Priority: optional
+Maintainer: Razvan MATEI <matei.rm94@gmail.com>
+Build-Depends: debhelper (>= 8.0.0), npm (>= 1.4.21), wyliodrin-server
+Standards-Version: 3.9.4
+Homepage: https://wyliodrin.com
+Vcs-Git: https://github.com/Wyliodrin/wyliodrin-shell.git
+Vcs-Browser: https://github.com/Wyliodrin/wyliodrin-shell
+
+Package: wyliodrin-shell
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, nodejs, supervisor, npm (>= 1.4.21), wyliodrin-server
+Description: wyliodrin-shell
